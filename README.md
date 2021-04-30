@@ -1,8 +1,8 @@
 # Github-User-Data-project
 
- Markup : * Used Github API to get User Data
-          * Use of useEffect and UseState Hooks
-          * Use of Async Await and fetch API
+ ..* Used Github API to get User Data
+ ..* Use of useEffect and UseState Hooks
+ ..* Use of Async Await and fetch API
 
 # Getting Started with Create React App
 
