@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 const USEeffectAPI = (props) => {
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
     try {
-      const response = await fetch(
-        "https://api.github.com/users"
-      );
+      const response = await fetch("https://api.github.com/users");
       setUsers(await response.json());
     } catch (error) {
       console.log("error occured");
@@ -37,7 +36,9 @@ const USEeffectAPI = (props) => {
                       />{" "}
                     </div>
                     <div className="ml-3 w-100">
-                      <h4 className=" mt-0">{user.login}</h4>{" "}
+                      <h4 className=" mt-0">
+                        {user.login} <FaGithub />
+                      </h4>{" "}
                       <span>{user.type}</span>
                       <div className="p-2 mt-4 bg-primary d-flex justify-content-between rounded text-white stats">
                         <div className="d-flex flex-column">
@@ -53,9 +54,7 @@ const USEeffectAPI = (props) => {
                         <div className="d-flex flex-column">
                           {" "}
                           <span className="rating">Rating</span>{" "}
-                          <span className="number3">
-                            30
-                          </span>{" "}
+                          <span className="number3">30</span>{" "}
                         </div>
                       </div>
                     </div>
